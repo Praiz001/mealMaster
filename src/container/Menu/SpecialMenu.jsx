@@ -6,14 +6,14 @@ import {SubHeading, MenuItem } from '../../components'
 import './SpecialMenu.css';
 
 const SpecialMenu = () => (
-  <div className='app__specialMenu flex-center' id='menu'>
+  <div className='app__specialMenu flex__center section__padding' id='menu'>
     <div className='app__specialMenu-title'>
       <SubHeading title='Menu that fits your palatte' />
       <h1 className='headtext__cormorant '>Today's Special</h1>
     </div>
     
     <div className='app__specialMenu-menu'>
-      <div className='app__specialMenu-menu_wine'>
+      <div className='app__specialMenu-menu_wine flex__center'>
         <p className='app__specialMenu-menu_heading'>Wine & Beer</p>
         <div className='app__specialMenu_menu_items'>
           {data.wines.map((wine, index) => (
@@ -26,12 +26,12 @@ const SpecialMenu = () => (
         <img src={images.menu} alt="menu__img" />
       </div>
 
-      <div className='app__specialMenu-cocktail'>
+      <div className='app__specialMenu-menu_cocktails  flex__center '>
         <p className='app__specialMenu-menu_heading'>Cocktails</p>
         <div className='app__specialMenu_menu_items'>
           {data.cocktails.map((cocktail, index) => (
             <MenuItem key={cocktail.title + index} title={cocktail.title} price={cocktail.price} tags={cocktail.tags} />
-            ))}
+          ))}
         </div>
       </div>
     </div>
